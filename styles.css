@@ -1,78 +1,169 @@
 body {
     margin: 0;
     padding: 0;
-    
+  
 }
 
 div {
-    background-color: lightblue;
-    border: 1px solid black;
+
 }
 
 .container {
-    display: grid;
-    width: 100vw;
     height: 100vh;
-    grid-template: 20% 20% 20% 20% 20% / 20% 20% 20% 20% 20%;
-    background-color: blueviolet;
+    display: grid;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
 }
 
 .nav {
   grid-column-start: 2;
-  grid-column-end: 7;
+  grid-column-end: 6;
   grid-row-start: 1;
-  grid-row-end: 3;
-  background-color: orange;
+  grid-row-end: 2;
+  background-color: white;
+
+
+  box-shadow: 0 8px 8px -4px rgb(141, 141, 141);
+
+  position: relative;
+  z-index: 1;
+
   display: grid;
-  grid-template: 25% 25% / 25% 25% 25% 25%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  
+}
+.top {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.bottom {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .search {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: rgb(62, 55, 43);
-  }
 
-  .profile {
-    grid-column-start: 4;
-    grid-column-end: 6;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar {
+    border-radius: 10px 0 0 10px;
+    background-color: #e7e5e4;
+    border: none;
+    padding: 16px 32px;
+    margin-left: 16px;
+    width: min(80% , 700px);
+}
+
+.search > button {
+    border: none;
+    padding: 16px 15px;
+    background-color: orange;
+}
+
+.profile > img {
+    width: 30px;
+}
+
+.profile {
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: rgb(52, 126, 79);
-  }
 
-  .user {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.user {
     grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background-color: rgb(126, 52, 112);
-  }
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 
-  .user-action {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background-color: rgb(124, 126, 52);
+    display: flex;
+    gap: 4px;
+
+    margin-left: 20px;
+}
+.user > img {
+    width: 40px;
+}
+.user > div {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 900;
+
+}
+.user-action {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+  .user-action > button {
+    border: none;
+    margin: 5px;
+    padding: 7px 25px;
+    font-size: 1.1em;
+    border-radius: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #3a86ff;
+    cursor: pointer;
+    transition: 1s;
+
+
   }
 
 
 .side-bar {
+    
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 7;
-    background-color: red;
+    grid-row-end: 6;
+    background-color: #0075A2;
 
 }
+
+hr { width: 70%; }
 
 .bar-title {
     font-size: 23px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
+    text-align: center;
+    padding: 10px 0 50px 0;
+    color: white;
 }
 
 .bar-items {
@@ -85,19 +176,34 @@ div {
     height: 500px;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+}
+
+li {
+    color: white;
+    padding: 0 0 15px 0;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .side-bar > div {
-    background-color: rgb(142, 255, 127);
+    
 }
 
 .content {
+    
     grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 7;
-    background-color: pink;
+    grid-row-end: 6;
+    background-color: rgb(216, 216, 216);
 
     display: grid;
-    grid-template: 20% 20% 20% / 20% 20% 20% 20% ;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr ;
   }
 
   .projects {
@@ -105,23 +211,26 @@ div {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 5;
-    background-color: green;
+    background-color: rgb(216, 216, 216);
+  
+  }
 
+  .projects h3 {
+    margin-left: 25px;
   }
   
   .project-items {
-    background-color: brown;
-    height: 100vh;
     display: grid;
-    gap: 10px;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   }
 
   .items {
+    height: 200px;
     margin: 5px;
     border-radius: 4px;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 8px -4px rgb(141, 141, 141);
+    border-left: 5px solid orange;
   }
 
   .trend {
@@ -129,20 +238,19 @@ div {
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 5;
-    background-color: yellow;
+    background-color: rgb(216, 216, 216);
     
   }
 
   .trend-item > div {
-    background-color: blue;
     height: 250px;
     margin: 5px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 8px -4px rgb(141, 141, 141);
   }
 
   .one {
     margin-bottom: 10px;
   }
 
-
-
- 
